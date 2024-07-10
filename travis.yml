@@ -37,6 +37,6 @@ env:
 notifications:
   email:
     recipients:
-      - viththiarul98@gmail.com
+      - viththiarul67@gmail.com
     on_success: always
     on_failure: always
