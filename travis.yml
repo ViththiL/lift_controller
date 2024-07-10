@@ -1,0 +1,42 @@
+language: python
+python:
+  - "3.10"
+
+# Install dependencies
+install:
+  - pip install -r requirements.txt
+  - pip install awscli
+
+# Script to build and upload binaries
+script:
+  # Build binaries for mock_lift
+  - cd mock_lift
+  - python setup.py bdist
+  - cd ..
+
+  # Build binaries for otis
+  - cd otis
+  - python setup.py bdist
+  - cd ..
+
+after_success:
+  # Upload mock_lift binary to S3
+  - aws s3 cp mock_lift/dist/ s3://$AWS_BUCKET/mock_lift/ --recursive --exclude "*" --include "*.tar.gz"
+
+  # Upload otis binary to S3
+  - aws s3 cp otis/dist/ s3://$AWS_BUCKET/otis/ --recursive --exclude "*" --include "*.tar.gz"
+
+# Environment variables for AWS credentials
+env:
+  global:
+    - AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY
+    - AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
+    - AWS_BUCKET=$AWS_BUCKET
+
+# Notify build results
+notifications:
+  email:
+    recipients:
+      - viththiarul67@gmail.com
+    on_success: always
+    on_failure: always
