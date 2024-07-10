@@ -1,0 +1,24 @@
+{
+  "mapping_data": [
+    {"lift_id": 10, "machine_id": 4}
+  ],
+  "machine_id": 4,
+  "Installation_ID":  "55485362-5dfd-4805-8945-4e48cc072ff1",
+  "grant_type": "client_credentials",
+  "client_id": "API-Sest-3037894123229769000",
+  "client_secret": "1a2e895c-9572-4e34-95b8-41c6d97608c3",
+  "port": 9000,
+  "group_id": 1,
+  "DECK": "BOTTOM",
+  "SIDE": "FRONT",
+  "TYPE": "STANDARD",
+  "token_expire_time": 7200,
+  "ground_floor_id": 1,
+  "top_floor_id": 11,
+  "full_log_file_path": "~/.sesto/logs/otis.log",
+  "reconnect_and_retry": 10,
+  "group_status_wait_time": 120,
+  "server_ip": "52.77.255.83",
+  "username": "sesto",
+  "password": "100%sesto"
+}

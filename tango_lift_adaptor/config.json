@@ -1,0 +1,16 @@
+{
+  "host_ip": "172.16.40.159",
+  "port" : "3001",
+  "lifts": {
+    "lift_name": "Lift1",
+    "unique_lift_car_id": 1
+  },
+  "modes": {
+    "amr": 2,
+    "passenger": 1
+  },
+  "floors": {
+    "L1": 1,
+    "L2": 2
+  }
+}

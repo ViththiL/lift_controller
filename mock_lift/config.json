@@ -1,0 +1,14 @@
+{
+    "total_floor": 12,
+    "floor_change_delay": 2,
+    "port": 9000,
+    "lift_car_id": 10,
+    "automatic_door": true,
+    "automatic_door_open_time": 90,
+    "server_ip": "127.0.0.1",
+    "server_user_name": "sesto",
+    "server_password": "100%sesto",
+    "homing_floor": 1,
+    "full_log_file_path": "~/.sesto/logs/mock_lift.log",
+    "version": "V1.0.1"
+}
